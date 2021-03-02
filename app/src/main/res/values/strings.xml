@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">DataBase</string>
+    <string name="txtCodigo">Codigo del producto</string>
+    <string name="txtDescripcion">Descripcion del producto</string>
+    <string name="txtPrecio">Precio del producto</string>
+    <string name="button">Registrar Producto</string>
+    <string name="button2">Buscar Producto</string>
+    <string name="button3">Eliminar Producto</string>
+    <string name="button4">Modificar Producto</string>
+
+</resources>
