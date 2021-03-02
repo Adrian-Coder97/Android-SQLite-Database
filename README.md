@@ -2,16 +2,12 @@
 Aplicacion android que almacena, consulta, elimina y modifica registros medio de SQLite
 
 
-1. Contenido de la clase AdminSQLiteOpenHelper: 
+1. Contenido de la clase AdminSQLiteOpenHelper:
 
-package com.example.database;
-import android.content.Context;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
 
-import androidx.annotation.Nullable;
 
-public class AdminSQLiteOpenHelper extends SQLiteOpenHelper{
+```
+    public class AdminSQLiteOpenHelper extends SQLiteOpenHelper{
 
     public AdminSQLiteOpenHelper(@Nullable Context context, @Nullable String name, @Nullable SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
@@ -27,10 +23,11 @@ public class AdminSQLiteOpenHelper extends SQLiteOpenHelper{
 
     }
 }
-
+```
 
 2. Metodo de Altas en la calse principal: 
 
+```
 public void Altas(View view) {
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Tienda", null, 1);//nombre de bd y version
         SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();//habilitar la db en modo lectura y escritura
@@ -56,10 +53,11 @@ public void Altas(View view) {
         }
 
     }
-
+```
 
 3. Metodo de Consultas: 
 
+```
  public void Consultas(View view) {
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Tienda", null, 1);
         SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
@@ -79,9 +77,11 @@ public void Altas(View view) {
             Toast.makeText(this, "Introduce el codigo del articulo", Toast.LENGTH_LONG).show();
         }
     }
+```
     
 4. Metodo de Bajas: 
 
+```
 public void Bajas(View view) {
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Tienda", null, 1);
         SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
@@ -105,9 +105,10 @@ public void Bajas(View view) {
 
     }
     
-    
+ ```   
+ 
 5. Metodo de modificaciones: 
-
+```
  public void Modificaciones(View view) {
         AdminSQLiteOpenHelper admin = new AdminSQLiteOpenHelper(this, "Tienda", null, 1);
         SQLiteDatabase BaseDeDatos = admin.getWritableDatabase();
@@ -135,5 +136,5 @@ public void Bajas(View view) {
             Toast.makeText(this, "Llenar todos los campos", Toast.LENGTH_LONG).show();
         }
     }
-
+```
 
